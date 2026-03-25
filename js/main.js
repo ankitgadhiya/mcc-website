@@ -128,4 +128,20 @@
     }
   }
 
+  // --- Leaderboard tabs ---
+  var lbBtns = document.querySelectorAll('.lb-tab-btn');
+  var lbPanels = document.querySelectorAll('.lb-panel');
+  if (lbBtns.length > 0) {
+    lbBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        lbBtns.forEach(function(b) { b.classList.remove('active'); });
+        lbPanels.forEach(function(p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        var tab = btn.getAttribute('data-tab');
+        var panel = document.getElementById('lb-' + tab);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  }
+
 })();
