@@ -852,14 +852,21 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .current-sponsor p:last-child { color: var(--text-gray); }
 
-/* --- Transparency Placeholder --- */
-.transparency-placeholder {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 60px 32px;
-  text-align: center;
-  border: 2px dashed rgba(255,255,255,0.15);
+/* --- Transparency Embed --- */
+.transparency-embed {
   margin-top: 32px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* --- CricHeroes Teams --- */
+.cricheroes-teams {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
 }
 
 /* --- Contact --- */
